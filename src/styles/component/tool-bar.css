@@ -1,0 +1,37 @@
+.toolbar__wrapper {
+  position: fixed;
+  z-index: 4;
+  bottom: 0;
+  width: 100%;
+  height: calc(106 / 32 * 1em);
+  background-color: #f5f5f5;
+  border-top: calc(1 / 32 * 1em) solid #d0d0d0;
+}
+
+.tool-bar-btn-wrapper {
+  display: flex;
+  height: inherit;
+  padding-left: calc(160 / 32 * 1em);
+}
+
+.toolbar__btn {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  padding-top: calc(10 / 32 * 1em);  
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: calc(20 / 32 * 1em);
+  color: var(--dark);
+}
+
+.toolbar__btn.active {
+  background-color: var(--grey-title);
+}
+
+.toolbar__btn img {
+  width: calc(45 / 24 * 1em);
+  height: calc(45 / 24 * 1em);
+  margin-bottom: -9px;
+}

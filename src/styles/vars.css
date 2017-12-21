@@ -1,0 +1,10 @@
+:root {
+  --theme: #ec5e1c;
+  --theme-light: #eb5e1b;
+  --grey: #666;
+  --grey-lighter: #999;
+  --grey-lightest: #eee;
+  --grey-title: #cbcbcb;
+  --grey-bg: #f2f2f2;
+  --dark: #333;
+}

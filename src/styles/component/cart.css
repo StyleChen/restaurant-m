@@ -1,0 +1,28 @@
+.cart {
+  position: fixed;
+  z-index: 5;
+  left: calc(26 / 32 * 1em);
+  bottom: calc(23 / 32 * 1em);
+  width: calc(100 / 32 * 1em);
+  height: calc(100 / 32 * 1em);
+  border-radius: 50%;
+  background-color: var(--theme-light)
+}
+
+.cart__count {
+  float: right;
+  width: calc(26 / 18 * 1em);
+  height: calc(26 / 18 * 1em);
+  padding-top: 1px;
+  border: calc(1 / 18 * 1em) solid white;
+  text-align: center;
+  font-size: calc(18 / 32 * 1em);
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+}
+
+.cart img {
+  width: calc(37 / 32 * 1em);
+  height: calc(37 / 32 * 1em);
+}

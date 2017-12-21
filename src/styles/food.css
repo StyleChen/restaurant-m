@@ -1,0 +1,222 @@
+@import './vars.css';
+@import './component/dishes.css';
+
+.happy__body {
+  margin-top: calc(88 / 32 * 1em);
+}
+.happy__tabs {
+  position: fixed;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  width: calc(160 / 32 * 1em);
+  overflow: auto;
+  max-height: 80vh;
+}
+
+.happy__tabs__item {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  flex-basis: calc(100 / 32 * 1em);
+}
+
+.happy__tabs__item.active {
+  background-color: white;
+}
+
+.happy__tabs__item.active .tab__link {
+  border-left: calc(8 / 28 * 1em) solid var(--theme);
+  font-size: calc(28 / 32 * 1em);
+  color: var(--dark)
+}
+
+.tab__link {
+  height: calc(50 / 28 * 1em);
+  line-height: calc(50 / 28 * 1em);
+  width: calc(160 / 28 * 1em);
+  font-size: calc(26 / 32 * 1em);
+  text-align: center;
+  color: var(--grey-lighter);
+}
+
+.happy__content {
+  margin-left: calc(160 / 32 * 1em);
+}
+
+.happy__content::after {
+  display: block;
+  content: '';
+  padding-top: calc(120 / 32 * 1em);
+}
+
+.item__panel .item__title {
+  height: calc(60 / 24 * 1em);
+  line-height: calc(60 / 24 * 1em);
+  font-size: calc(24 / 32 * 1em);
+  padding-left: calc(20 / 24 * 1em);
+}
+
+/* 遮罩层 */
+.blackboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 购物车面板 */
+.cart-panel {
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  left: -100%;
+  bottom: calc(96 / 28 * 1em);
+  border-bottom: calc(1 / 32 * 1em) solid var(--grey-lightest);
+  background-color: white;
+  font-size: calc(28 / 32 * 1em);
+  transition: all 0.2s linear;
+}
+
+.cart-panel.active {
+  left: 0;
+}
+
+.cart-panel dl {
+  margin: 0;
+  padding-bottom: 1.5em;
+}
+
+.cart-panel dl dt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(74 / 28 * 1em);
+  padding: 0 calc(29 / 28 * 1em);
+  background-color: var(--grey-bg);
+}
+
+.cart-panel dl dt span {
+  border-left: calc(8 / 28 * 1em) solid var(--theme-light);
+  text-indent: 0.5em;
+}
+
+.cart-panel .clear {
+  display: flex;
+  align-items: center;
+  font-size: calc(24 / 28 * 1em);
+}
+
+.cart-panel .clear img {
+  height: calc(26 / 24 * 1em);
+  width: calc(26 / 24 * 1em);
+  margin-right: 0.5em;
+}
+
+.cart__dish {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(95 / 28 * 1em);
+  margin-left: calc(37 / 28 * 1em);
+}
+
+.cart__dish:not(:first-of-type) {
+  border-top: calc(1 / 28 * 1em) solid var(--grey-lightest);
+}
+
+.dish__price {
+  color: var(--theme);
+}
+
+/* 菜肴详情面板 */
+.food-panel {
+  position: fixed;
+  z-index: 6;
+  top: calc(145 / 30 * 1em);
+  width: calc(670 / 32 * 1em);
+  max-width: 90vw;
+  left: 50%;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  background-color: white;
+}
+
+.img__wrapper {
+  width: 100%;
+  height: calc(560 / 32 * 1em);
+  padding: calc(50 / 32 * 1em) calc(90 / 32 * 1em);
+  background-color: var(--grey-bg);
+  border-radius: 5px 5px 0 0;
+}
+
+.img__wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.food__info {
+  padding: 0 calc(30 / 32 * 1em);
+}
+
+.food__name {
+  margin: calc(30 / 30 * 1em) 0 0;
+  font-size: calc(30 / 32 * 1em);
+  font-weight: normal;
+}
+
+.food__sku {
+  margin: calc(20 / 24 * 1em) 0 0;
+  font-size: calc(24 / 32 * 1em);
+  color: var(--grey-lighter);
+  font-weight: normal;
+}
+
+.food__ingredient {
+  margin: calc(20 / 28 * 1em) 0;
+  font-size: calc(28 / 32 * 1em);
+  line-height: 1.43;
+}
+
+.food__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 calc(30 / 32 * 1em) calc(33 / 32 * 1em);
+}
+
+.food__price {
+  font-size: calc(30 / 32 * 1em);
+  color: var(--theme);
+}
+
+.food__price::first-letter {
+  font-size: calc(24 / 32 * 1em);
+}
+
+.add-to-cart {
+  height: calc(54 / 24 * 1em);
+  width: calc(162 / 24 * 1em);
+  border: 0;
+  border-radius: 27px;
+  font-size: calc(24 / 32 * 1em);
+  background-color: var(--theme-light);
+  color: white;
+}
+
+/* 小屏手机适配 */
+@media (max-width: 320px) {
+  .food-panel {
+    top: calc(90 / 30 * 1em);
+  }
+
+  .img__wrapper {
+    height: calc(480 / 32 * 1em);
+  }
+}

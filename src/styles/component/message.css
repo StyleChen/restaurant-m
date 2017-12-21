@@ -1,0 +1,31 @@
+.message__wrapper {
+  position: fixed;
+  z-index: 9;
+  top: calc(422 / 28 * 1em);
+  left: 50%;
+  width: calc(280 / 28 * 1em);
+  padding: calc(34 / 28 * 1em) calc(41 / 28 * 1em);
+  border-radius: 10px;
+  line-height: 1.64;
+  text-align: center;
+  font-size: calc(28 / 32 * 1em);
+  background-color: black;
+  color: white;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.message__wrapper.active {
+  visibility: visible;
+  animation: fade 3s forwards;  
+}
+
+@keyframes fade {
+  50% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0;
+  }
+}
